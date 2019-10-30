@@ -349,7 +349,7 @@ static void parse_commandline(int argc, char **argv) {
 	getopt_def(&getopt_parser, "d", "device", "device_filename", NULL, NULL,
 			"Raw SDCard device (with \"/dev\")\n"
 			"To check: plug in SDcard, then \"dmesg | tail\"",
-			"sdb", "Use \"/dev/sdb\" as interface to SDcard.", NULL, NULL);
+			"/dev/sdb", "Use \"/dev/sdb\" as interface to SDcard.", NULL, NULL);
 	getopt_def(&getopt_parser, "x", "xml", "config_filename", NULL, NULL,
 			"Path to mandatory SCSI2SD geometry config file (XML)",
 			"4xRD54_rev471.xml", "The XML file must be generated with \"scsi2sd-util\".\n", NULL, NULL);
