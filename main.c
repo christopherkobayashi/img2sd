@@ -347,7 +347,7 @@ static void parse_commandline(int argc, char **argv) {
 			"Verbose output",
 			NULL, NULL, NULL, NULL);
 	getopt_def(&getopt_parser, "d", "device", "device_filename", NULL, NULL,
-			"Raw SDCard device, without \"/dev\".\n"
+			"Raw SDCard device (with \"/dev\")\n"
 			"To check: plug in SDcard, then \"dmesg | tail\"",
 			"sdb", "Use \"/dev/sdb\" as interface to SDcard.", NULL, NULL);
 	getopt_def(&getopt_parser, "x", "xml", "config_filename", NULL, NULL,
@@ -384,7 +384,6 @@ static void parse_commandline(int argc, char **argv) {
 			if (getopt_arg_s(&getopt_parser, "device_filename", buffer,
 					sizeof(buffer)) < 0)
 				commandline_option_error(NULL);
-			strcpy(opt_device, "/dev/");
 			strcat(opt_device, buffer);
 			if (access(opt_device, F_OK) == -1)
 				commandline_option_error("SDcard device does not exist");
