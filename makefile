@@ -12,7 +12,7 @@
 
 # compiler flags and libraries
 CC_DBG_FLAGS = -ggdb3 -O0 
-# CC_DBG_FLAGS = -ggdb3 -O0 -Wall -Wextra
+# CC_DBG_FLAGS = -ggdb3 -O0 -Wall -Wextra -Werror
 CCDEFS =-I/usr/include/libxml2
 # CCDEFS =-DLIBXML_OUTPUT_ENABLED -DLIBXML_TREE_ENABLED -I/usr/include/libxml2
 LDFLAGS=-lxml2
