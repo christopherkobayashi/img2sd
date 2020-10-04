@@ -355,12 +355,12 @@ static void parse_commandline(int argc, char **argv) {
 			"4xRD54_rev471.xml", "The XML file must be generated with \"scsi2sd-util\".\n", NULL, NULL);
 	getopt_def(&getopt_parser, "r", "read", "target_id,image_file", NULL, NULL,
 			"Read disk image from SDcard partition.",
-			"3,rsxdata.img",
+			"3 rsxdata.img",
 			"Read partition with SCSI ID #3 and save it as file \"rsxdata.img\".",
 			NULL, NULL);
 	getopt_def(&getopt_parser, "w", "write", "target_id,image_file", NULL, NULL,
 			"Write disk image into SDcard partition. Size must fit!",
-			"0,rt1157.rd54",
+			"0 rt1157.rd54",
 			"Copy the disk image file \"rt1157.rd54\" onto drive #0 partition\n"
 					"Offset and size on SDcard is taken from XML config file.",
 			NULL, NULL);
