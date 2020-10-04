@@ -35,6 +35,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <linux/limits.h>
+#include <sys/stat.h>
 
 #include "error.h"
 #include "utils.h"
